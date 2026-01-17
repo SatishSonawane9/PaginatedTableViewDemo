@@ -1,20 +1,20 @@
 # PaginatedTableViewDemo
-📱 iOS Products App – Paginated TableView with Networking
-🚀 Overview
+iOS Products App – Paginated TableView with Networking
+ Overview
 This iOS application displays a list of electronic products fetched from a paginated API. It is built using UIKit, follows MVVM architecture, and demonstrates clean separation of concerns, pagination, networking, and error handling.
 
-🧩 Features
-	•	📡 API Integration using URLSession
-	•	🔄 Pagination support (loads more data on scroll)
-	•	📋 UITableView with Custom Cells
-	•	🧭 Product Detail Screen
-	•	🌀 Loading Indicator (Footer Spinner)
-	•	❌ Graceful Error Handling
-	•	🧪 Codable-based JSON Parsing
-	•	🖼️ Lazy Image Loading
-	•	🧱 MVVM Architecture
+ Features
+	•	API Integration using URLSession
+	•	Pagination support (loads more data on scroll)
+	•	UITableView with Custom Cells
+	•	Product Detail Screen
+	•	Loading Indicator (Footer Spinner)
+	•	Graceful Error Handling
+	•	Codable-based JSON Parsing
+	•	Lazy Image Loading
+	•	MVVM Architecture
 
-🛠️ Tech Stack
+ Tech Stack
 	•	Language: Swift
 	•	UI Framework: UIKit (Storyboard-based)
 	•	Architecture: MVVM
@@ -22,7 +22,7 @@ This iOS application displays a list of electronic products fetched from a pagin
 	•	Parsing: Codable
 	•	Minimum iOS Version: iOS 13+
 
-🌐 API Details
+ API Details
 Endpoint
 
 https://fakeapi.net/products?page=0&limit=10&category=electronics
@@ -38,7 +38,7 @@ Response Structure
 }
 Pagination is handled using the page value from the response.
 
-📐 Architecture
+Architecture
 MVVM Breakdown
 Model
 	•	Product
@@ -57,25 +57,25 @@ Service Layer
 	•	APIServiceProtocol
 	•	APIService
 
-🔄 Pagination Flow
+Pagination Flow
 	1	Initial API call loads page 0
 	2	When last cell appears:
 	◦	loadMoreIfNeeded(index:) is triggered
 	3	Next page is fetched using response pagination
 	4	New products are appended to the list
 
-🌀 Loading State
+Loading State
 	•	Footer spinner (UIActivityIndicatorView) shown while fetching data
 	•	Prevents duplicate API calls using isFetching flag
 
-❌ Error Handling
+Error Handling
 	•	Handles:
 	◦	No Internet
 	◦	Invalid response
 	◦	Decoding failures
 	•	Displays error state with retry option
 
-📄 Screens
+Screens
 Product List Screen
 	•	Displays:
 	◦	Image
@@ -87,37 +87,13 @@ Product Detail Screen
 	•	Shows full product information
 	•	Loaded via navigation push
 
-🧪 How to Run
+How to Run
 	1	Clone the repository
 	2	Open .xcodeproj in Xcode
 	3	Run on Simulator or Device
 	4	Ensure internet connection is available
-
-📁 Project Structure
-
-├── Models
-│   ├── Product.swift
-│   └── ProductResponse.swift
-├── ViewModels
-│   └── ProductListViewModel.swift
-├── Views
-│   ├── ProductCell.swift
-│   └── LoadingFooterView.swift
-├── ViewControllers
-│   ├── ProductListViewController.swift
-│   └── ProductDetailViewController.swift
-├── Networking
-│   ├── APIService.swift
-│   └── APIServiceProtocol.swift
-
-✨ Improvements (Future Scope)
-	•	Pull to Refresh
-	•	Unit Tests for ViewModel
-	•	Image caching using NSCache
-	•	Offline support using CoreData
-	•	Search & filtering
-
-👨‍💻 Author
+	
+ Author
 Satish S iOS Developer
 
 📌 Notes
